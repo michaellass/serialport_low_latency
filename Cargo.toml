@@ -1,0 +1,30 @@
+[package]
+authors = [
+    "Paderborn Center for Parallel Computing <pc2-info@uni-paderborn.de>",
+    "Michael Lass <bevan@bi-co.net>",
+]
+categories = ["hardware-support"]
+description = "Enable or disable low latency mode for serial ports on Linux."
+documentation = "https://docs.rs/serialport_low_latency/"
+edition = "2021"
+homepage = "https://github.com/pc2/serialport_low_latency/"
+keywords = ["ftdi", "latency", "rs232", "serial", "serialport"]
+license = "MIT"
+name = "serialport_low_latency"
+publish = ["crates-io"]
+readme = "README.md"
+repository = "https://github.com/pc2/serialport_low_latency.git"
+version = "0.1.0"
+
+
+[build-dependencies]
+bindgen = { version = "0.65.1", default-features = false, features = [
+    "runtime",
+] }
+
+[dependencies]
+nix = { version = "0.26.2", default-features = false, features = ["ioctl"] }
+serialport = { version = "4.2.0", default-features = false }
+
+[lib]
+doctest = false
