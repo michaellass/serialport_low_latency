@@ -38,10 +38,10 @@ fn update_low_latency(port: &mut serialport::TTYPort, action: UpdateAction) -> n
 
     match action {
         UpdateAction::Enable => {
-            serial_line_info.flags = serial_line_info.flags | (ASYNC_LOW_LATENCY as i32)
+            serial_line_info.flags |= (ASYNC_LOW_LATENCY as i32)
         }
         UpdateAction::Disable => {
-            serial_line_info.flags = serial_line_info.flags & !(ASYNC_LOW_LATENCY as i32)
+            serial_line_info.flags &= !(ASYNC_LOW_LATENCY as i32)
         }
     }
 
