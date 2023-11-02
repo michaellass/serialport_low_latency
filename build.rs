@@ -1,15 +1,15 @@
-use bindgen::{Builder, CargoCallbacks};
+extern crate bindgen;
 use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    let bindings = Builder::default()
+    let bindings = bindgen::Builder::default()
         .header("bindings.h")
         .allowlist_type("serial_struct")
         .allowlist_var("TIOCGSERIAL")
         .allowlist_var("TIOCSSERIAL")
         .allowlist_var("ASYNC_LOW_LATENCY")
-        .parse_callbacks(Box::new(CargoCallbacks))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .generate()
         .unwrap();
 
