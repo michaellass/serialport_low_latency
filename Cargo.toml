@@ -23,7 +23,7 @@ bindgen = { version = "0.69.1", default-features = false, features = [
 ] }
 
 [dependencies]
-nix = { version = "0.26.2", default-features = false, features = ["ioctl"] }
+nix = { version = "0.27.1", default-features = false, features = ["ioctl"] }
 serialport = { version = "4.2.0", default-features = false }
 
 [lib]
