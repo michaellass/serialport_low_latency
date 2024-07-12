@@ -1,6 +1,6 @@
 # serialport_low_latency
 
-[![license](https://img.shields.io/github/license/pc2/serialport_low_latency.svg)](https://github.com/pc2/serialport_low_latency/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/michaellass/serialport_low_latency.svg)](https://github.com/michaellass/serialport_low_latency/blob/master/LICENSE)
 [![crates.io](https://img.shields.io/crates/v/serialport_low_latency.svg)](https://crates.io/crates/serialport_low_latency)
 [![docs.rs](https://docs.rs/serialport_low_latency/badge.svg)](https://docs.rs/serialport_low_latency)
 

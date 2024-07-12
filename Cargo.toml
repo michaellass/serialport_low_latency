@@ -7,14 +7,14 @@ categories = ["hardware-support"]
 description = "Enable or disable low latency mode for serial ports on Linux."
 documentation = "https://docs.rs/serialport_low_latency/"
 edition = "2021"
-homepage = "https://github.com/pc2/serialport_low_latency/"
+homepage = "https://github.com/michaellass/serialport_low_latency/"
 keywords = ["ftdi", "latency", "rs232", "serial", "serialport"]
 license = "MIT"
 name = "serialport_low_latency"
 publish = ["crates-io"]
 readme = "README.md"
-repository = "https://github.com/pc2/serialport_low_latency.git"
-version = "0.1.0"
+repository = "https://github.com/michaellass/serialport_low_latency.git"
+version = "0.1.1"
 
 
 [build-dependencies]
