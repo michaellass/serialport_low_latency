@@ -20,7 +20,7 @@ mod ioctls {
     ioctl_write_ptr_bad!(tiocsserial, TIOCSSERIAL, serial_struct);
 }
 
-use ioctls::{serial_struct, tiocgserial, tiocsserial, ASYNC_LOW_LATENCY};
+use ioctls::{ASYNC_LOW_LATENCY, serial_struct, tiocgserial, tiocsserial};
 use std::mem::MaybeUninit;
 use std::os::unix::prelude::AsRawFd;
 
@@ -45,12 +45,8 @@ fn update_low_latency(port: &mut serialport::TTYPort, action: UpdateAction) -> n
     let mut serial_line_info = unsafe { serial_line_info.assume_init() };
 
     match action {
-        UpdateAction::Enable => {
-            serial_line_info.flags |= ASYNC_LOW_LATENCY as i32
-        }
-        UpdateAction::Disable => {
-            serial_line_info.flags &= !(ASYNC_LOW_LATENCY as i32)
-        }
+        UpdateAction::Enable => serial_line_info.flags |= ASYNC_LOW_LATENCY as i32,
+        UpdateAction::Disable => serial_line_info.flags &= !(ASYNC_LOW_LATENCY as i32),
     }
 
     // Safety: There are no safety remarks in the documentation of nix::sys::ioctl. However,
