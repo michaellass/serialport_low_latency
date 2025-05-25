@@ -1,5 +1,13 @@
-#![warn(missing_docs)]
-#![warn(rust_2018_idioms)]
+#![deny(missing_docs)]
+#![deny(warnings)]
+#![deny(deprecated_safe)]
+#![deny(future_incompatible)]
+#![deny(keyword_idents)]
+#![deny(let_underscore)]
+#![deny(nonstandard_style)]
+#![deny(refining_impl_trait)]
+#![deny(rust_2018_idioms)]
+#![deny(unused)]
 
 //! Enable or disable low latency mode for serial ports of type serialport::TTYPort on Linux.
 
