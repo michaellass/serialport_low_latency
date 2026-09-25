@@ -13,7 +13,7 @@ jobs:
   stable:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: dtolnay/rust-toolchain@stable
     - name: Build
       run: cargo build --verbose --target x86_64-unknown-linux-gnu
@@ -25,7 +25,7 @@ jobs:
   beta:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: dtolnay/rust-toolchain@beta
     - name: Build
       run: cargo build --verbose --target x86_64-unknown-linux-gnu
@@ -35,7 +35,7 @@ jobs:
   nightly:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: dtolnay/rust-toolchain@nightly
     - name: Build
       run: cargo build --verbose --target x86_64-unknown-linux-gnu
@@ -45,7 +45,7 @@ jobs:
   clippy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: dtolnay/rust-toolchain@nightly
       with:
         components: clippy
